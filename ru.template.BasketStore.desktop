@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=ru.template.BasketStore
+Exec=/usr/bin/ru.template.BasketStore
+Name=Basket
+Name[ru]=Корзинка
+
+[X-Application]
+Permissions=SecureStorage;Internet
+OrganizationName=ru.template
+ApplicationName=BasketStore
+ExecDBus=/usr/bin/ru.template.BasketStore
