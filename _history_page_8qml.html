@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Корзинка: Файл BasketStore_Aurora-main/qml/pages/HistoryPage.qml</title>
+<link rel="icon" href="logo.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Корзинка<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Каталог товаров с офлайн-поддержкой</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_history_page_8qml.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл HistoryPage.qml</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>import QtQuick;</code><br />
+<code>import import;</code><br />
+<code>import Sailfish.Silica;</code><br />
+<code>import Database;</code><br />
+<code>import Page;</code><br />
+<code>import objectName;</code><br />
+<code>import allowedOrientations;</code><br />
+<code>import backgroundColor;</code><br />
+<code>import ListModel;</code><br />
+<code>import id;</code><br />
+<code>import property;</code><br />
+<code>import var;</code><br />
+<code>import listProduct;</code><br />
+<code>import int;</code><br />
+<code>import productCount;</code><br />
+<code>import double;</code><br />
+<code>import allPriceBay;</code><br />
+<code>import bool;</code><br />
+<code>import currentState;</code><br />
+<code>import SilicaFlickable;</code><br />
+<code>import anchors.fill;</code><br />
+<code>import contentHeight;</code><br />
+<code>import Column;</code><br />
+<code>import anchors;</code><br />
+<code>import fill;</code><br />
+<code>import leftMargin;</code><br />
+<code>import rightMargin;</code><br />
+<code>import spacing;</code><br />
+<code>import PageHeader;</code><br />
+<code>import title;</code><br />
+<code>import qsTr;</code><br />
+<code>import titleColor;</code><br />
+<code>import Rectangle;</code><br />
+<code>import radius;</code><br />
+<code>import height;</code><br />
+<code>import width;</code><br />
+<code>import Label;</code><br />
+<code>import anchors.horizontalCenter;</code><br />
+<code>import anchors.verticalCenter;</code><br />
+<code>import color;</code><br />
+<code>import text;</code><br />
+<code>import allPriceBay.toFixed;</code><br />
+<code>import font.pixelSize;</code><br />
+<code>import function;</code><br />
+<code>import setDefaultText;</code><br />
+<code>import textLabelPrice.text;</code><br />
+<code>import rowButton.visible;</code><br />
+<code>import false;</code><br />
+<code>import Item;</code><br />
+<code>import Image;</code><br />
+<code>import visible;</code><br />
+<code>import source;</code><br />
+<code>import fillMode;</code><br />
+<code>import Row;</code><br />
+<code>import Button;</code><br />
+<code>import onClicked;</code><br />
+<code>import updateDataHistory;</code><br />
+<code>import if;</code><br />
+<code>import db.stateConnect;</code><br />
+<code>import db.connect;</code><br />
+<code>import db.removeTableDatabase;</code><br />
+<code>import listHistoryBay;</code><br />
+<code>import storeModel.clear;</code><br />
+<code>import loadProducts;</code><br />
+<code>import stateEmptyDatabase;</code><br />
+<code>import icon.source;</code><br />
+<code>import icon.height;</code><br />
+<code>import icon.width;</code><br />
+<code>import sortDataHistory;</code><br />
+<code>import btn_update.clicked;</code><br />
+<code>import true;</code><br />
+<code>import Repeater;</code><br />
+<code>import model;</code><br />
+<code>import delegate;</code><br />
+<code>import showProductDetails;</code><br />
+<code>import index;</code><br />
+<code>import anchors.margins;</code><br />
+<code>import Theme.highlightColor;</code><br />
+<code>import border.color;</code><br />
+<code>import border.width;</code><br />
+<code>import Title;</code><br />
+<code>import wrapMode;</code><br />
+<code>import horizontalAlignment;</code><br />
+<code>import maximumLineCount;</code><br />
+<code>import elide;</code><br />
+<code>import storeModel.get;</code><br />
+<code>import Price;</code><br />
+<code>import VerticalScrollDecorator;</code><br />
+<code>import console.log;</code><br />
+<code>import imageIcon.visible;</code><br />
+<code>import spacer.visible;</code><br />
+<code>import &quot;historyPage&quot;;</code><br />
+<code>import &quot;#5577ee&quot;;</code><br />
+<code>import &quot;pageHeader&quot;;</code><br />
+<code>import &quot;Purchase&quot;;</code><br />
+<code>import &quot;(&quot;;</code><br />
+<code>import &quot;)&quot;;</code><br />
+<code>import &quot;white&quot;;</code><br />
+<code>import &quot;Сумма покупок&quot;;</code><br />
+<code>import &quot;: &quot;;</code><br />
+<code>import &quot; $&quot;;</code><br />
+<code>import &quot;#40BF6A&quot;;</code><br />
+<code>import &quot;История покупок пуста&quot;;</code><br />
+<code>import &quot;../icons/history.png&quot;;</code><br />
+<code>import &quot;Обновить&quot;;</code><br />
+<code>import &quot;Очистить историю&quot;;</code><br />
+<code>import &quot;History&quot;;</code><br />
+<code>import &quot;lightgreen&quot;;</code><br />
+<code>import &quot;Сортировка&quot;;</code><br />
+<code>import &quot;:&quot;;</code><br />
+<code>import &quot;../icons/arrowUp.png&quot;;</code><br />
+<code>import &quot;ASC&quot;;</code><br />
+<code>import &quot;../icons/arrowDown.png&quot;;</code><br />
+<code>import &quot;DESC&quot;;</code><br />
+<code>import &quot;Отмена&quot;;</code><br />
+<code>import &quot;#f8f8f8&quot;;</code><br />
+<code>import &quot;black&quot;;</code><br />
+<code>import &quot;#6699FF&quot;;</code><br />
+<code>import &quot;Без названия&quot;;</code><br />
+<code>import &quot;Цена&quot;;</code><br />
+<code>import &quot;Загружаем продукты...&quot;;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="_history_page_8qml__dep__incl.png" border="0" usemap="#a_basket_store___aurora-main_2qml_2pages_2_history_page_8qmldep" loading="lazy" alt=""/></div>
+<map name="a_basket_store___aurora-main_2qml_2pages_2_history_page_8qmldep" id="a_basket_store___aurora-main_2qml_2pages_2_history_page_8qmldep">
+<area shape="rect" title=" " alt="" coords="5,5,224,48"/>
+<area shape="rect" href="_xD0_xA1ategories_page_8qml.html" title=" " alt="" coords="11,96,218,171"/>
+<area shape="poly" title=" " alt="" coords="115,61,117,96,112,95,114,66"/>
+<area shape="rect" href="_main_page_8qml.html" title=" " alt="" coords="27,219,202,293"/>
+<area shape="poly" title=" " alt="" coords="115,184,117,219,112,218,114,189"/>
+<area shape="rect" href="_basket_store_8qml.html" title=" " alt="" coords="27,341,202,416"/>
+<area shape="poly" title=" " alt="" coords="116,307,117,342,112,340,113,311"/>
+</map>
+</div>
+</div>
+<p><a href="_history_page_8qml_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a5edaf243f42b525a7a0f0dda816ac3f5" id="r_a5edaf243f42b525a7a0f0dda816ac3f5"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5edaf243f42b525a7a0f0dda816ac3f5">for</a> (var i in listProduct)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:affd1995dabb9d57a137c11837331cb71" id="r_affd1995dabb9d57a137c11837331cb71"><td class="memItemLeft">rowSort&#160;</td><td class="memItemRight"><a class="el" href="#affd1995dabb9d57a137c11837331cb71">visible</a></td></tr>
+<tr class="memdesc:affd1995dabb9d57a137c11837331cb71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Страница История покупок  <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Функции</h2>
+<a id="a5edaf243f42b525a7a0f0dda816ac3f5" name="a5edaf243f42b525a7a0f0dda816ac3f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5edaf243f42b525a7a0f0dda816ac3f5">&#9670;&#160;</a></span>for()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">for </td>
+          <td>(</td>
+          <td class="paramtype">var i in</td>          <td class="paramname"><span class="paramname"><em>listProduct</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Переменные</h2>
+<a id="affd1995dabb9d57a137c11837331cb71" name="affd1995dabb9d57a137c11837331cb71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affd1995dabb9d57a137c11837331cb71">&#9670;&#160;</a></span>visible</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">spacer_2 visible</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">              =<span class="keyword">true</span></div>
+<div class="line">spacer_1.visible=<span class="keyword">true</span></div>
+</div><!-- fragment -->
+<p>Страница История покупок </p>
+<p>Содержит информацию о покупках пользователя. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_360431943b24ff09646ad68398308819.html">BasketStore_Aurora-main</a></li><li class="navelem"><a href="dir_7f44a4dd240ba85e5970fba9b87b995f.html">qml</a></li><li class="navelem"><a href="dir_d410f9b8e291e97135c0e3a6bfdf4cc3.html">pages</a></li><li class="navelem"><a href="_history_page_8qml.html">HistoryPage.qml</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

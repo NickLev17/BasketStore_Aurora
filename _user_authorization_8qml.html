@@ -1,0 +1,772 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Корзинка: Файл BasketStore_Aurora-main/qml/pages/UserAuthorization.qml</title>
+<link rel="icon" href="logo.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Корзинка<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Каталог товаров с офлайн-поддержкой</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_user_authorization_8qml.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл UserAuthorization.qml</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>import QtQuick;</code><br />
+<code>import import;</code><br />
+<code>import Sailfish.Silica;</code><br />
+<code>import Page;</code><br />
+<code>import objectName;</code><br />
+<code>import allowedOrientations;</code><br />
+<code>import backgroundColor;</code><br />
+<code>import SilicaFlickable;</code><br />
+<code>import anchors.fill;</code><br />
+<code>import contentHeight;</code><br />
+<code>import PageHeader;</code><br />
+<code>import id;</code><br />
+<code>import title;</code><br />
+<code>import Column;</code><br />
+<code>import width;</code><br />
+<code>import spacing;</code><br />
+<code>import y;</code><br />
+<code>import Label;</code><br />
+<code>import anchors;</code><br />
+<code>import left;</code><br />
+<code>import right;</code><br />
+<code>import leftMargin;</code><br />
+<code>import rightMargin;</code><br />
+<code>import topMargin;</code><br />
+<code>import color;</code><br />
+<code>import font.pixelSize;</code><br />
+<code>import textFormat;</code><br />
+<code>import wrapMode;</code><br />
+<code>import text;</code><br />
+<code>import TextField;</code><br />
+<code>import placeholderText;</code><br />
+<code>import inputMethodHints;</code><br />
+<code>import EnterKey.enabled;</code><br />
+<code>import EnterKey.iconSource;</code><br />
+<code>import &quot;userAuthorizationPage&quot;;</code><br />
+<code>import &quot;#5577ee&quot;;</code><br />
+<code>import &quot;flickable&quot;;</code><br />
+<code>import &quot;pageHeader&quot;;</code><br />
+<code>import &quot;Информация о пользователе&quot;;</code><br />
+<code>import &quot;layout&quot;;</code><br />
+<code>import &quot;nameText&quot;;</code><br />
+<code>import &quot;Имя&quot;;</code><br />
+<code>import &quot;Введите имя&quot;;</code><br />
+<code>import &quot;../icons/enterKey.png&quot;;</code><br />
+<code>import &quot;familyText&quot;;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для UserAuthorization.qml:</div>
+<div class="dyncontent">
+<div class="center"><img src="_user_authorization_8qml__incl.png" border="0" usemap="#a_basket_store___aurora-main_2qml_2pages_2_user_authorization_8qml" loading="lazy" alt=""/></div>
+<map name="a_basket_store___aurora-main_2qml_2pages_2_user_authorization_8qml" id="a_basket_store___aurora-main_2qml_2pages_2_user_authorization_8qml">
+<area shape="rect" title=" " alt="" coords="2050,5,2300,48"/>
+<area shape="rect" title=" " alt="" coords="5,104,75,131"/>
+<area shape="poly" title=" " alt="" coords="2046,30,1591,39,981,51,415,71,209,84,87,99,80,101,78,96,86,93,208,79,414,66,981,46,1591,33,2052,29"/>
+<area shape="rect" title=" " alt="" coords="99,104,157,131"/>
+<area shape="poly" title=" " alt="" coords="2046,29,1607,38,1022,50,481,69,284,83,169,99,163,100,162,95,167,93,284,77,480,64,1022,44,1607,32,2052,29"/>
+<area shape="rect" title=" " alt="" coords="180,104,281,131"/>
+<area shape="poly" title=" " alt="" coords="2046,28,1669,33,1162,43,902,51,659,63,451,79,294,99,279,102,278,97,293,93,451,74,659,58,901,46,1161,38,1669,28,2052,28"/>
+<area shape="rect" title=" " alt="" coords="305,104,356,131"/>
+<area shape="poly" title=" " alt="" coords="2046,30,1648,39,1126,51,646,71,472,84,370,99,365,100,364,95,369,93,472,79,646,66,1126,46,1648,34,2052,29"/>
+<area shape="rect" title=" " alt="" coords="381,104,472,131"/>
+<area shape="poly" title=" " alt="" coords="2046,28,1704,34,1252,44,1022,53,808,64,624,79,484,99,472,102,471,96,484,93,623,74,807,59,1022,47,1252,39,1704,29,2052,28"/>
+<area shape="rect" title=" " alt="" coords="496,104,632,131"/>
+<area shape="poly" title=" " alt="" coords="2047,30,1735,40,1330,53,933,73,769,85,644,99,623,103,622,97,644,93,769,79,933,67,1330,48,1735,35,2052,30"/>
+<area shape="rect" title=" " alt="" coords="656,104,776,131"/>
+<area shape="poly" title=" " alt="" coords="2047,31,1762,41,1398,54,1044,73,898,85,787,99,769,102,769,97,786,93,898,79,1044,67,1398,48,1762,35,2052,30"/>
+<area shape="rect" title=" " alt="" coords="799,104,905,131"/>
+<area shape="poly" title=" " alt="" coords="2047,31,1787,41,1461,54,1145,73,1015,85,916,99,902,102,901,97,916,93,1015,80,1145,68,1460,49,1787,36,2052,31"/>
+<area shape="rect" title=" " alt="" coords="928,104,1013,131"/>
+<area shape="poly" title=" " alt="" coords="2046,31,1808,41,1513,54,1231,73,1114,85,1026,99,1015,101,1014,96,1025,93,1114,79,1230,67,1513,48,1808,35,2052,31"/>
+<area shape="rect" title=" " alt="" coords="1037,104,1139,131"/>
+<area shape="poly" title=" " alt="" coords="2046,33,1575,58,1329,77,1228,87,1151,99,1137,102,1136,97,1150,93,1228,82,1329,71,1575,53,2052,32"/>
+<area shape="rect" title=" " alt="" coords="1163,104,1256,131"/>
+<area shape="poly" title=" " alt="" coords="2046,28,1891,34,1696,44,1481,64,1374,80,1269,99,1256,102,1255,96,1267,93,1373,74,1481,59,1695,39,1891,28,2052,27"/>
+<area shape="rect" title=" " alt="" coords="1279,104,1318,131"/>
+<area shape="poly" title=" " alt="" coords="2046,31,1870,39,1662,51,1468,70,1390,83,1330,99,1329,99,1328,94,1329,93,1389,78,1468,65,1662,46,1869,34,2052,30"/>
+<area shape="rect" title=" " alt="" coords="1342,104,1384,131"/>
+<area shape="poly" title=" " alt="" coords="2046,32,1884,42,1696,55,1522,74,1451,85,1397,99,1394,99,1393,94,1395,93,1450,80,1521,68,1696,50,1884,37,2052,32"/>
+<area shape="rect" title=" " alt="" coords="1408,104,1474,131"/>
+<area shape="poly" title=" " alt="" coords="2046,29,1929,36,1788,47,1636,67,1487,99,1480,101,1480,95,1486,93,1635,62,1787,42,1929,31,2052,28"/>
+<area shape="rect" title=" " alt="" coords="1499,104,1552,131"/>
+<area shape="poly" title=" " alt="" coords="2047,29,1944,36,1821,48,1691,68,1565,99,1560,100,1560,95,1563,93,1690,63,1820,43,1943,31,2052,29"/>
+<area shape="rect" title=" " alt="" coords="1576,104,1642,131"/>
+<area shape="poly" title=" " alt="" coords="2052,34,1862,57,1757,75,1655,99,1649,101,1648,95,1654,93,1756,69,1861,52,2047,35"/>
+<area shape="rect" title=" " alt="" coords="1666,104,1705,131"/>
+<area shape="poly" title=" " alt="" coords="2052,32,1973,42,1888,54,1801,72,1717,99,1715,99,1714,94,1715,93,1800,67,1887,49,1972,36,2046,32"/>
+<area shape="rect" title=" " alt="" coords="1728,104,1781,131"/>
+<area shape="poly" title=" " alt="" coords="2052,40,1925,64,1858,79,1794,99,1791,100,1790,95,1793,93,1857,74,1923,59,2046,41"/>
+<area shape="rect" title=" " alt="" coords="1805,104,1872,131"/>
+<area shape="poly" title=" " alt="" coords="2068,48,1977,72,1885,99,1879,101,1878,95,1883,93,1975,67,2062,49"/>
+<area shape="rect" title=" " alt="" coords="1896,104,1936,131"/>
+<area shape="poly" title=" " alt="" coords="2089,48,2019,72,1949,98,1948,99,1947,94,1947,94,2017,67,2084,49"/>
+<area shape="rect" title=" " alt="" coords="1960,104,2006,131"/>
+<area shape="poly" title=" " alt="" coords="2127,48,2020,98,2018,99,2017,94,2018,94,2122,49"/>
+<area shape="rect" title=" " alt="" coords="2030,104,2108,131"/>
+<area shape="poly" title=" " alt="" coords="2153,48,2097,96,2095,91,2148,49"/>
+<area shape="rect" title=" " alt="" coords="2132,104,2217,131"/>
+<area shape="poly" title=" " alt="" coords="2177,47,2177,90,2173,86,2173,50"/>
+<area shape="rect" title=" " alt="" coords="2241,104,2319,131"/>
+<area shape="poly" title=" " alt="" coords="2200,46,2256,95,2251,93,2198,51"/>
+<area shape="rect" title=" " alt="" coords="2343,104,2393,131"/>
+<area shape="poly" title=" " alt="" coords="2225,46,2332,94,2335,97,2329,96,2330,98,2224,51"/>
+<area shape="rect" title=" " alt="" coords="2416,104,2517,131"/>
+<area shape="poly" title=" " alt="" coords="2247,46,2406,93,2417,99,2411,98,2405,99,2246,51"/>
+<area shape="rect" title=" " alt="" coords="2540,104,2625,131"/>
+<area shape="poly" title=" " alt="" coords="2300,44,2413,65,2530,93,2540,99,2535,98,2529,99,2412,70,2300,49"/>
+<area shape="rect" title=" " alt="" coords="2649,104,2730,131"/>
+<area shape="poly" title=" " alt="" coords="2301,36,2462,58,2551,73,2638,93,2648,99,2643,98,2637,99,2550,79,2462,63,2300,42"/>
+<area shape="rect" title=" " alt="" coords="2754,104,2798,131"/>
+<area shape="poly" title=" " alt="" coords="2300,25,2399,30,2511,42,2629,62,2743,93,2747,97,2742,96,2742,99,2628,67,2510,47,2398,36,2300,31"/>
+<area shape="rect" title=" " alt="" coords="2822,104,2896,131"/>
+<area shape="poly" title=" " alt="" coords="2300,29,2410,35,2538,47,2675,66,2810,93,2820,99,2815,98,2809,99,2674,71,2538,52,2409,40,2300,34"/>
+<area shape="rect" title=" " alt="" coords="2920,104,3032,131"/>
+<area shape="poly" title=" " alt="" coords="2300,30,2428,37,2580,49,2745,67,2909,93,2926,100,2921,99,2907,99,2744,73,2580,54,2427,42,2300,35"/>
+<area shape="rect" title=" " alt="" coords="3056,104,3179,131"/>
+<area shape="poly" title=" " alt="" coords="2300,28,2452,34,2638,45,2842,65,3044,93,3065,100,3059,99,3044,99,2841,70,2638,51,2451,39,2300,33"/>
+<area shape="rect" title=" " alt="" coords="3204,104,3327,131"/>
+<area shape="poly" title=" " alt="" coords="2300,26,2476,30,2699,41,2945,61,3069,75,3191,93,3212,100,3207,100,3190,99,3069,81,2944,66,2699,46,2476,35,2300,31"/>
+<area shape="rect" title=" " alt="" coords="3351,104,3494,131"/>
+<area shape="poly" title=" " alt="" coords="2300,25,2500,29,2759,39,3049,60,3195,75,3339,93,3364,100,3359,100,3338,99,3195,80,3048,65,2759,45,2500,34,2300,31"/>
+<area shape="rect" title=" " alt="" coords="3518,104,3671,131"/>
+<area shape="poly" title=" " alt="" coords="2300,25,2527,27,2827,36,3166,57,3338,73,3507,93,3534,100,3529,100,3506,99,3338,78,3165,62,2827,42,2527,32,2300,30"/>
+<area shape="rect" title=" " alt="" coords="3696,104,3766,131"/>
+<area shape="poly" title=" " alt="" coords="2300,25,2612,28,3011,38,3213,46,3400,58,3561,74,3683,93,3694,99,3688,98,3682,99,3561,79,3400,63,3213,52,3011,43,2611,34,2300,31"/>
+<area shape="rect" title=" " alt="" coords="3789,104,3859,131"/>
+<area shape="poly" title=" " alt="" coords="2300,25,2630,26,3056,35,3273,44,3475,56,3647,72,3778,93,3788,98,3782,98,3777,99,3646,77,3474,61,3273,49,3056,40,2630,32,2300,30"/>
+<area shape="rect" title=" " alt="" coords="3882,104,3974,131"/>
+<area shape="poly" title=" " alt="" coords="2300,26,2646,29,3100,39,3331,47,3546,59,3731,74,3871,93,3886,99,3880,99,3870,99,3730,79,3546,64,3331,52,3100,44,2646,34,2300,31"/>
+<area shape="rect" title=" " alt="" coords="3997,96,4118,139"/>
+<area shape="poly" title=" " alt="" coords="2300,26,2661,31,3141,42,3621,62,3824,76,3985,96,3979,96,3823,81,3620,67,3140,47,2661,36,2300,32"/>
+<area shape="rect" title=" " alt="" coords="4141,104,4198,131"/>
+<area shape="poly" title=" " alt="" coords="2300,27,2732,33,3300,45,3826,65,4017,78,4130,93,4137,98,4132,97,4129,99,4016,83,3826,70,3300,50,2732,38,2300,32"/>
+<area shape="rect" title=" " alt="" coords="4222,104,4300,131"/>
+<area shape="poly" title=" " alt="" coords="2300,27,2747,35,3340,48,3891,68,4091,80,4210,93,4222,99,4217,98,4209,99,4091,85,3891,73,3340,54,2747,40,2300,32"/>
+<area shape="rect" title=" " alt="" coords="4324,104,4372,131"/>
+<area shape="poly" title=" " alt="" coords="2300,26,2768,30,3395,40,3704,49,3977,61,4188,75,4263,84,4313,93,4319,98,4313,97,4311,99,4262,89,4187,81,3976,66,3704,54,3394,46,2768,35,2300,31"/>
+<area shape="rect" title=" " alt="" coords="4396,104,4495,131"/>
+<area shape="poly" title=" " alt="" coords="2300,25,2740,25,3343,32,3654,40,3945,52,4195,70,4384,93,4401,99,4395,99,4384,99,4195,75,3945,58,3654,45,3342,37,2740,30,2300,30"/>
+<area shape="rect" title=" " alt="" coords="4518,104,4663,131"/>
+<area shape="poly" title=" " alt="" coords="2300,26,2762,29,3399,39,3730,47,4039,59,4305,74,4507,93,4533,100,4528,100,4506,99,4305,79,4039,64,3729,53,3399,44,2761,34,2300,31"/>
+<area shape="rect" title=" " alt="" coords="4687,104,4769,131"/>
+<area shape="poly" title=" " alt="" coords="2300,26,2839,32,3578,44,4272,64,4525,78,4675,93,4688,99,4683,98,4674,99,4525,83,4272,70,3578,50,2839,37,2300,32"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="_user_authorization_8qml__dep__incl.png" border="0" usemap="#a_basket_store___aurora-main_2qml_2pages_2_user_authorization_8qmldep" loading="lazy" alt=""/></div>
+<map name="a_basket_store___aurora-main_2qml_2pages_2_user_authorization_8qmldep" id="a_basket_store___aurora-main_2qml_2pages_2_user_authorization_8qmldep">
+<area shape="rect" title=" " alt="" coords="5,5,256,48"/>
+<area shape="rect" href="_main_page_8qml.html" title=" " alt="" coords="43,96,218,171"/>
+<area shape="poly" title=" " alt="" coords="131,61,133,96,128,95,130,66"/>
+<area shape="rect" href="_basket_store_8qml.html" title=" " alt="" coords="43,219,218,293"/>
+<area shape="poly" title=" " alt="" coords="132,184,133,219,128,217,129,189"/>
+</map>
+</div>
+</div>
+<p><a href="_user_authorization_8qml_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a020958e4b275525e2f463cf698c854a9" id="r_a020958e4b275525e2f463cf698c854a9"><td class="memItemLeft">margins textField_Family text console&#160;</td><td class="memItemRight"><a class="el" href="#a020958e4b275525e2f463cf698c854a9">log</a> (&quot;Имя&quot;, textField_Name.text) console.log(&quot;Отчество&quot;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:aad6726f47a79c5c1af9dde5ec708242f" id="r_aad6726f47a79c5c1af9dde5ec708242f"><td class="memItemLeft">right&#160;</td><td class="memItemRight"><a class="el" href="#aad6726f47a79c5c1af9dde5ec708242f">__pad0__</a></td></tr>
+<tr class="memdesc:aad6726f47a79c5c1af9dde5ec708242f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Страница авторизации профиля пользователя.  <br /></td></tr>
+<tr class="memitem:aa48a029cd664a9218ac8491bcc091be5" id="r_aa48a029cd664a9218ac8491bcc091be5"><td class="memItemLeft">margins&#160;</td><td class="memItemRight"><a class="el" href="#aa48a029cd664a9218ac8491bcc091be5">__pad1__</a></td></tr>
+<tr class="memitem:ac8fd39d7e9b1a5b924196800988de343" id="r_ac8fd39d7e9b1a5b924196800988de343"><td class="memItemLeft">right&#160;</td><td class="memItemRight"><a class="el" href="#ac8fd39d7e9b1a5b924196800988de343">__pad2__</a></td></tr>
+<tr class="memitem:ada5e1c280cd5db91fe15f74943138dd7" id="r_ada5e1c280cd5db91fe15f74943138dd7"><td class="memItemLeft">margins&#160;</td><td class="memItemRight"><a class="el" href="#ada5e1c280cd5db91fe15f74943138dd7">__pad3__</a></td></tr>
+<tr class="memitem:a667eda73293a7ad799c8070a596c4bf9" id="r_a667eda73293a7ad799c8070a596c4bf9"><td class="memItemLeft">right&#160;</td><td class="memItemRight"><a class="el" href="#a667eda73293a7ad799c8070a596c4bf9">__pad4__</a></td></tr>
+<tr class="memitem:adc6baff2d8ae1399a339694c29ec1b2d" id="r_adc6baff2d8ae1399a339694c29ec1b2d"><td class="memItemLeft">margins&#160;</td><td class="memItemRight"><a class="el" href="#adc6baff2d8ae1399a339694c29ec1b2d">__pad5__</a></td></tr>
+<tr class="memitem:ad37df4841d40470905aa143e4ef90fc3" id="r_ad37df4841d40470905aa143e4ef90fc3"><td class="memItemLeft">right&#160;</td><td class="memItemRight"><a class="el" href="#ad37df4841d40470905aa143e4ef90fc3">__pad6__</a></td></tr>
+<tr class="memitem:aaabe1b1ba85f3d0b461950f49abb312c" id="r_aaabe1b1ba85f3d0b461950f49abb312c"><td class="memItemLeft">margins&#160;</td><td class="memItemRight"><a class="el" href="#aaabe1b1ba85f3d0b461950f49abb312c">__pad7__</a></td></tr>
+<tr class="memitem:a0d2f892054f67ef53754aeb70cf1e3e4" id="r_a0d2f892054f67ef53754aeb70cf1e3e4"><td class="memItemLeft">right&#160;</td><td class="memItemRight"><a class="el" href="#a0d2f892054f67ef53754aeb70cf1e3e4">__pad8__</a></td></tr>
+<tr class="memitem:aa86c191fb3630a739320597788ce2f20" id="r_aa86c191fb3630a739320597788ce2f20"><td class="memItemLeft">margins&#160;</td><td class="memItemRight"><a class="el" href="#aa86c191fb3630a739320597788ce2f20">__pad9__</a></td></tr>
+<tr class="memitem:a2dfe84c6cc3e510a810b3937a0126224" id="r_a2dfe84c6cc3e510a810b3937a0126224"><td class="memItemLeft">right&#160;</td><td class="memItemRight"><a class="el" href="#a2dfe84c6cc3e510a810b3937a0126224">__pad10__</a></td></tr>
+<tr class="memitem:a16efd6dfcd1986b3cf57a3c84695a7f2" id="r_a16efd6dfcd1986b3cf57a3c84695a7f2"><td class="memItemLeft">margins&#160;</td><td class="memItemRight"><a class="el" href="#a16efd6dfcd1986b3cf57a3c84695a7f2">__pad11__</a></td></tr>
+<tr class="memitem:a225954ffcd682e13376cdf7e08ca9031" id="r_a225954ffcd682e13376cdf7e08ca9031"><td class="memItemLeft">right&#160;</td><td class="memItemRight"><a class="el" href="#a225954ffcd682e13376cdf7e08ca9031">__pad12__</a></td></tr>
+<tr class="memitem:a1a6d575cdd71bfe656bb9f82cafae208" id="r_a1a6d575cdd71bfe656bb9f82cafae208"><td class="memItemLeft">margins&#160;</td><td class="memItemRight"><a class="el" href="#a1a6d575cdd71bfe656bb9f82cafae208">__pad13__</a></td></tr>
+<tr class="memitem:aebd419471d2c9250d6986dcd186cef90" id="r_aebd419471d2c9250d6986dcd186cef90"><td class="memItemLeft">right&#160;</td><td class="memItemRight"><a class="el" href="#aebd419471d2c9250d6986dcd186cef90">__pad14__</a></td></tr>
+<tr class="memitem:a31710f3707c977eaa495f193a356942c" id="r_a31710f3707c977eaa495f193a356942c"><td class="memItemLeft">margins&#160;</td><td class="memItemRight"><a class="el" href="#a31710f3707c977eaa495f193a356942c">__pad15__</a></td></tr>
+<tr class="memitem:ae357b69df757a4fed59bb068f2784121" id="r_ae357b69df757a4fed59bb068f2784121"><td class="memItemLeft">right&#160;</td><td class="memItemRight"><a class="el" href="#ae357b69df757a4fed59bb068f2784121">__pad16__</a></td></tr>
+<tr class="memitem:a2a647c9c234f245c5d360524fcd423e6" id="r_a2a647c9c234f245c5d360524fcd423e6"><td class="memItemLeft">margins&#160;</td><td class="memItemRight"><a class="el" href="#a2a647c9c234f245c5d360524fcd423e6">__pad17__</a></td></tr>
+<tr class="memitem:a95f53e42c5242b7b21953e13ced50a69" id="r_a95f53e42c5242b7b21953e13ced50a69"><td class="memItemLeft">right&#160;</td><td class="memItemRight"><a class="el" href="#a95f53e42c5242b7b21953e13ced50a69">__pad18__</a></td></tr>
+<tr class="memitem:a60ff55212b52c1e2b9aa8ab3ebfbca84" id="r_a60ff55212b52c1e2b9aa8ab3ebfbca84"><td class="memItemLeft">margins&#160;</td><td class="memItemRight"><a class="el" href="#a60ff55212b52c1e2b9aa8ab3ebfbca84">__pad19__</a></td></tr>
+<tr class="memitem:a932e0b70977b8499e18781c3116378fb" id="r_a932e0b70977b8499e18781c3116378fb"><td class="memItemLeft">right&#160;</td><td class="memItemRight"><a class="el" href="#a932e0b70977b8499e18781c3116378fb">__pad20__</a></td></tr>
+<tr class="memitem:ac6aa6e1622015a0f3ec718e72b347146" id="r_ac6aa6e1622015a0f3ec718e72b347146"><td class="memItemLeft">margins&#160;</td><td class="memItemRight"><a class="el" href="#ac6aa6e1622015a0f3ec718e72b347146">__pad21__</a></td></tr>
+<tr class="memitem:a7892d856857f24eb595a925c450efda7" id="r_a7892d856857f24eb595a925c450efda7"><td class="memItemLeft">right&#160;</td><td class="memItemRight"><a class="el" href="#a7892d856857f24eb595a925c450efda7">__pad22__</a></td></tr>
+<tr class="memitem:ab767a41ce59350501ada69d219b42274" id="r_ab767a41ce59350501ada69d219b42274"><td class="memItemLeft">margins&#160;</td><td class="memItemRight"><a class="el" href="#ab767a41ce59350501ada69d219b42274">__pad23__</a></td></tr>
+<tr class="memitem:a65ea8ee7c2bc5e2ab00e13d7b228a151" id="r_a65ea8ee7c2bc5e2ab00e13d7b228a151"><td class="memItemLeft">right&#160;</td><td class="memItemRight"><a class="el" href="#a65ea8ee7c2bc5e2ab00e13d7b228a151">__pad24__</a></td></tr>
+<tr class="memitem:ab2988260d7dcf9b98410ae29485869fe" id="r_ab2988260d7dcf9b98410ae29485869fe"><td class="memItemLeft">margins&#160;</td><td class="memItemRight"><a class="el" href="#ab2988260d7dcf9b98410ae29485869fe">__pad25__</a></td></tr>
+<tr class="memitem:a65f9d7b120c457b113d20b5c7db1702d" id="r_a65f9d7b120c457b113d20b5c7db1702d"><td class="memItemLeft">top&#160;</td><td class="memItemRight"><a class="el" href="#a65f9d7b120c457b113d20b5c7db1702d">__pad26__</a></td></tr>
+<tr class="memitem:a8d59bea2be155fd988032439b26e2646" id="r_a8d59bea2be155fd988032439b26e2646"><td class="memItemLeft">right&#160;</td><td class="memItemRight"><a class="el" href="#a8d59bea2be155fd988032439b26e2646">__pad27__</a></td></tr>
+<tr class="memitem:abe57d7bc971e4480661d0fd6d02bffdd" id="r_abe57d7bc971e4480661d0fd6d02bffdd"><td class="memItemLeft">margins&#160;</td><td class="memItemRight"><a class="el" href="#abe57d7bc971e4480661d0fd6d02bffdd">__pad28__</a></td></tr>
+<tr class="memitem:a691086d99a999b145d936657dd80aee7" id="r_a691086d99a999b145d936657dd80aee7"><td class="memItemLeft">right&#160;</td><td class="memItemRight"><a class="el" href="#a691086d99a999b145d936657dd80aee7">__pad29__</a></td></tr>
+<tr class="memitem:a4cb6385d7036cbe406877e146da65634" id="r_a4cb6385d7036cbe406877e146da65634"><td class="memItemLeft">margins&#160;</td><td class="memItemRight"><a class="el" href="#a4cb6385d7036cbe406877e146da65634">__pad30__</a></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Функции</h2>
+<a id="a020958e4b275525e2f463cf698c854a9" name="a020958e4b275525e2f463cf698c854a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a020958e4b275525e2f463cf698c854a9">&#9670;&#160;</a></span>log()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">margins textField_Family text console log </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Имя&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">textField_Name.</td>          <td class="paramname"><span class="paramname"><em>text</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Переменные</h2>
+<a id="aad6726f47a79c5c1af9dde5ec708242f" name="aad6726f47a79c5c1af9dde5ec708242f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad6726f47a79c5c1af9dde5ec708242f">&#9670;&#160;</a></span>__pad0__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">right __pad0__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Страница авторизации профиля пользователя. </p>
+<p>Позволяет задать основную информацию о пользователе. </p>
+
+</div>
+</div>
+<a id="a2dfe84c6cc3e510a810b3937a0126224" name="a2dfe84c6cc3e510a810b3937a0126224"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dfe84c6cc3e510a810b3937a0126224">&#9670;&#160;</a></span>__pad10__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">right __pad10__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a16efd6dfcd1986b3cf57a3c84695a7f2" name="a16efd6dfcd1986b3cf57a3c84695a7f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16efd6dfcd1986b3cf57a3c84695a7f2">&#9670;&#160;</a></span>__pad11__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">margins __pad11__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a225954ffcd682e13376cdf7e08ca9031" name="a225954ffcd682e13376cdf7e08ca9031"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a225954ffcd682e13376cdf7e08ca9031">&#9670;&#160;</a></span>__pad12__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">right __pad12__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a6d575cdd71bfe656bb9f82cafae208" name="a1a6d575cdd71bfe656bb9f82cafae208"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a6d575cdd71bfe656bb9f82cafae208">&#9670;&#160;</a></span>__pad13__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">margins __pad13__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aebd419471d2c9250d6986dcd186cef90" name="aebd419471d2c9250d6986dcd186cef90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebd419471d2c9250d6986dcd186cef90">&#9670;&#160;</a></span>__pad14__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">right __pad14__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a31710f3707c977eaa495f193a356942c" name="a31710f3707c977eaa495f193a356942c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31710f3707c977eaa495f193a356942c">&#9670;&#160;</a></span>__pad15__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">margins __pad15__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae357b69df757a4fed59bb068f2784121" name="ae357b69df757a4fed59bb068f2784121"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae357b69df757a4fed59bb068f2784121">&#9670;&#160;</a></span>__pad16__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">right __pad16__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a647c9c234f245c5d360524fcd423e6" name="a2a647c9c234f245c5d360524fcd423e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a647c9c234f245c5d360524fcd423e6">&#9670;&#160;</a></span>__pad17__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">margins __pad17__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95f53e42c5242b7b21953e13ced50a69" name="a95f53e42c5242b7b21953e13ced50a69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95f53e42c5242b7b21953e13ced50a69">&#9670;&#160;</a></span>__pad18__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">right __pad18__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60ff55212b52c1e2b9aa8ab3ebfbca84" name="a60ff55212b52c1e2b9aa8ab3ebfbca84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60ff55212b52c1e2b9aa8ab3ebfbca84">&#9670;&#160;</a></span>__pad19__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">margins __pad19__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa48a029cd664a9218ac8491bcc091be5" name="aa48a029cd664a9218ac8491bcc091be5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa48a029cd664a9218ac8491bcc091be5">&#9670;&#160;</a></span>__pad1__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">margins __pad1__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a932e0b70977b8499e18781c3116378fb" name="a932e0b70977b8499e18781c3116378fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a932e0b70977b8499e18781c3116378fb">&#9670;&#160;</a></span>__pad20__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">right __pad20__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6aa6e1622015a0f3ec718e72b347146" name="ac6aa6e1622015a0f3ec718e72b347146"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6aa6e1622015a0f3ec718e72b347146">&#9670;&#160;</a></span>__pad21__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">margins __pad21__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7892d856857f24eb595a925c450efda7" name="a7892d856857f24eb595a925c450efda7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7892d856857f24eb595a925c450efda7">&#9670;&#160;</a></span>__pad22__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">right __pad22__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab767a41ce59350501ada69d219b42274" name="ab767a41ce59350501ada69d219b42274"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab767a41ce59350501ada69d219b42274">&#9670;&#160;</a></span>__pad23__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">margins __pad23__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65ea8ee7c2bc5e2ab00e13d7b228a151" name="a65ea8ee7c2bc5e2ab00e13d7b228a151"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65ea8ee7c2bc5e2ab00e13d7b228a151">&#9670;&#160;</a></span>__pad24__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">right __pad24__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2988260d7dcf9b98410ae29485869fe" name="ab2988260d7dcf9b98410ae29485869fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2988260d7dcf9b98410ae29485869fe">&#9670;&#160;</a></span>__pad25__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">margins __pad25__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65f9d7b120c457b113d20b5c7db1702d" name="a65f9d7b120c457b113d20b5c7db1702d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65f9d7b120c457b113d20b5c7db1702d">&#9670;&#160;</a></span>__pad26__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">top __pad26__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d59bea2be155fd988032439b26e2646" name="a8d59bea2be155fd988032439b26e2646"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d59bea2be155fd988032439b26e2646">&#9670;&#160;</a></span>__pad27__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">right __pad27__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe57d7bc971e4480661d0fd6d02bffdd" name="abe57d7bc971e4480661d0fd6d02bffdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe57d7bc971e4480661d0fd6d02bffdd">&#9670;&#160;</a></span>__pad28__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">margins __pad28__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a691086d99a999b145d936657dd80aee7" name="a691086d99a999b145d936657dd80aee7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a691086d99a999b145d936657dd80aee7">&#9670;&#160;</a></span>__pad29__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">right __pad29__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac8fd39d7e9b1a5b924196800988de343" name="ac8fd39d7e9b1a5b924196800988de343"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8fd39d7e9b1a5b924196800988de343">&#9670;&#160;</a></span>__pad2__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">right __pad2__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4cb6385d7036cbe406877e146da65634" name="a4cb6385d7036cbe406877e146da65634"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cb6385d7036cbe406877e146da65634">&#9670;&#160;</a></span>__pad30__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">margins __pad30__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ada5e1c280cd5db91fe15f74943138dd7" name="ada5e1c280cd5db91fe15f74943138dd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada5e1c280cd5db91fe15f74943138dd7">&#9670;&#160;</a></span>__pad3__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">margins __pad3__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a667eda73293a7ad799c8070a596c4bf9" name="a667eda73293a7ad799c8070a596c4bf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a667eda73293a7ad799c8070a596c4bf9">&#9670;&#160;</a></span>__pad4__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">right __pad4__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adc6baff2d8ae1399a339694c29ec1b2d" name="adc6baff2d8ae1399a339694c29ec1b2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc6baff2d8ae1399a339694c29ec1b2d">&#9670;&#160;</a></span>__pad5__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">margins __pad5__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad37df4841d40470905aa143e4ef90fc3" name="ad37df4841d40470905aa143e4ef90fc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad37df4841d40470905aa143e4ef90fc3">&#9670;&#160;</a></span>__pad6__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">right __pad6__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaabe1b1ba85f3d0b461950f49abb312c" name="aaabe1b1ba85f3d0b461950f49abb312c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaabe1b1ba85f3d0b461950f49abb312c">&#9670;&#160;</a></span>__pad7__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">margins __pad7__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0d2f892054f67ef53754aeb70cf1e3e4" name="a0d2f892054f67ef53754aeb70cf1e3e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d2f892054f67ef53754aeb70cf1e3e4">&#9670;&#160;</a></span>__pad8__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">right __pad8__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa86c191fb3630a739320597788ce2f20" name="aa86c191fb3630a739320597788ce2f20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa86c191fb3630a739320597788ce2f20">&#9670;&#160;</a></span>__pad9__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">margins __pad9__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_360431943b24ff09646ad68398308819.html">BasketStore_Aurora-main</a></li><li class="navelem"><a href="dir_7f44a4dd240ba85e5970fba9b87b995f.html">qml</a></li><li class="navelem"><a href="dir_d410f9b8e291e97135c0e3a6bfdf4cc3.html">pages</a></li><li class="navelem"><a href="_user_authorization_8qml.html">UserAuthorization.qml</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

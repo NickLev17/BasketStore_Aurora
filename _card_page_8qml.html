@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Корзинка: Файл BasketStore_Aurora-main/qml/pages/CardPage.qml</title>
+<link rel="icon" href="logo.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Корзинка<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Каталог товаров с офлайн-поддержкой</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_card_page_8qml.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл CardPage.qml</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>import QtQuick;</code><br />
+<code>import import;</code><br />
+<code>import Sailfish.Silica;</code><br />
+<code>import as;</code><br />
+<code>import Components;</code><br />
+<code>import Database;</code><br />
+<code>import Page;</code><br />
+<code>import objectName;</code><br />
+<code>import allowedOrientations;</code><br />
+<code>import backgroundColor;</code><br />
+<code>import property;</code><br />
+<code>import string;</code><br />
+<code>import productTitle;</code><br />
+<code>import productImage;</code><br />
+<code>import double;</code><br />
+<code>import productPrice;</code><br />
+<code>import productDescription;</code><br />
+<code>import productVoices;</code><br />
+<code>import productRate;</code><br />
+<code>import int;</code><br />
+<code>import count;</code><br />
+<code>import productCategory;</code><br />
+<code>import id;</code><br />
+<code>import SilicaFlickable;</code><br />
+<code>import anchors.fill;</code><br />
+<code>import contentHeight;</code><br />
+<code>import Column;</code><br />
+<code>import width;</code><br />
+<code>import Theme.horizontalPageMargin;</code><br />
+<code>import x;</code><br />
+<code>import spacing;</code><br />
+<code>import PageHeader;</code><br />
+<code>import title;</code><br />
+<code>import titleColor;</code><br />
+<code>import Rectangle;</code><br />
+<code>import height;</code><br />
+<code>import radius;</code><br />
+<code>import color;</code><br />
+<code>import border.color;</code><br />
+<code>import border.width;</code><br />
+<code>import anchors.horizontalCenter;</code><br />
+<code>import anchors.topMargin;</code><br />
+<code>import anchors.bottomMargin;</code><br />
+<code>import Image;</code><br />
+<code>import parent.width;</code><br />
+<code>import source;</code><br />
+<code>import fillMode;</code><br />
+<code>import Label;</code><br />
+<code>import text;</code><br />
+<code>import horizontalAlignment;</code><br />
+<code>import wrapMode;</code><br />
+<code>import font.pixelSize;</code><br />
+<code>import Row;</code><br />
+<code>import anchors.verticalCenter;</code><br />
+<code>import productVoices.toString;</code><br />
+<code>import Item;</code><br />
+<code>import &quot;../components&quot;;</code><br />
+<code>import &quot;CardPage&quot;;</code><br />
+<code>import &quot;#5577ee&quot;;</code><br />
+<code>import &quot;pageHeader&quot;;</code><br />
+<code>import &quot;Card&quot;;</code><br />
+<code>import &quot;white&quot;;</code><br />
+<code>import &quot;black&quot;;</code><br />
+<code>import &quot;Оценок&quot;;</code><br />
+<code>import &quot;: &quot;;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a7809934cb5d11843e72e449ee4a27d7c" id="r_a7809934cb5d11843e72e449ee4a27d7c"><td class="memItemLeft">height&#160;</td><td class="memItemRight"><a class="el" href="#a7809934cb5d11843e72e449ee4a27d7c">__pad0__</a></td></tr>
+<tr class="memdesc:a7809934cb5d11843e72e449ee4a27d7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Страница Карточка товара  <br /></td></tr>
+<tr class="memitem:a3f81b4bacf12d2b4f4cb3101046e4c00" id="r_a3f81b4bacf12d2b4f4cb3101046e4c00"><td class="memItemLeft">height&#160;</td><td class="memItemRight"><a class="el" href="#a3f81b4bacf12d2b4f4cb3101046e4c00">__pad1__</a></td></tr>
+<tr class="memitem:af7dc46632d54cda776d267d3722f5ca5" id="r_af7dc46632d54cda776d267d3722f5ca5"><td class="memItemLeft">height&#160;</td><td class="memItemRight"><a class="el" href="#af7dc46632d54cda776d267d3722f5ca5">__pad2__</a></td></tr>
+<tr class="memitem:a0cce727c3fd80d4d12baaf6e0ab7b837" id="r_a0cce727c3fd80d4d12baaf6e0ab7b837"><td class="memItemLeft">height&#160;</td><td class="memItemRight"><a class="el" href="#a0cce727c3fd80d4d12baaf6e0ab7b837">productTitle</a></td></tr>
+<tr class="memitem:a61568253d51ce3fdc25d3eb67ecffae9" id="r_a61568253d51ce3fdc25d3eb67ecffae9"><td class="memItemLeft">height&#160;</td><td class="memItemRight"><a class="el" href="#a61568253d51ce3fdc25d3eb67ecffae9">productPrice</a></td></tr>
+<tr class="memitem:a99eb94851841a25c04099a1e6ac3a8a4" id="r_a99eb94851841a25c04099a1e6ac3a8a4"><td class="memItemLeft">height&#160;</td><td class="memItemRight"><a class="el" href="#a99eb94851841a25c04099a1e6ac3a8a4">productImage</a></td></tr>
+<tr class="memitem:aecc89cb370246f2a48bcaadff64274c8" id="r_aecc89cb370246f2a48bcaadff64274c8"><td class="memItemLeft">height&#160;</td><td class="memItemRight"><a class="el" href="#aecc89cb370246f2a48bcaadff64274c8">productCategory</a></td></tr>
+<tr class="memitem:a804f7312124cf099d8db7cd24e619963" id="r_a804f7312124cf099d8db7cd24e619963"><td class="memItemLeft">height&#160;</td><td class="memItemRight"><a class="el" href="#a804f7312124cf099d8db7cd24e619963">productDescription</a></td></tr>
+<tr class="memitem:a0b00bf9bfc2752872d5be943eb8bb117" id="r_a0b00bf9bfc2752872d5be943eb8bb117"><td class="memItemLeft">height&#160;</td><td class="memItemRight"><a class="el" href="#a0b00bf9bfc2752872d5be943eb8bb117">productRate</a></td></tr>
+</table>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Переменные</h2>
+<a id="a7809934cb5d11843e72e449ee4a27d7c" name="a7809934cb5d11843e72e449ee4a27d7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7809934cb5d11843e72e449ee4a27d7c">&#9670;&#160;</a></span>__pad0__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">height __pad0__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Страница Карточка товара </p>
+<p>Содержит информацию о товаре. Изображение, наименование, рейтинг, количество оценок, описание товара. Кнопки "Купить сейча" и "В Корзину". </p>
+
+</div>
+</div>
+<a id="a3f81b4bacf12d2b4f4cb3101046e4c00" name="a3f81b4bacf12d2b4f4cb3101046e4c00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f81b4bacf12d2b4f4cb3101046e4c00">&#9670;&#160;</a></span>__pad1__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">height __pad1__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af7dc46632d54cda776d267d3722f5ca5" name="af7dc46632d54cda776d267d3722f5ca5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7dc46632d54cda776d267d3722f5ca5">&#9670;&#160;</a></span>__pad2__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">height __pad2__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aecc89cb370246f2a48bcaadff64274c8" name="aecc89cb370246f2a48bcaadff64274c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc89cb370246f2a48bcaadff64274c8">&#9670;&#160;</a></span>productCategory</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">height productCategory</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a804f7312124cf099d8db7cd24e619963" name="a804f7312124cf099d8db7cd24e619963"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a804f7312124cf099d8db7cd24e619963">&#9670;&#160;</a></span>productDescription</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">height productDescription</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99eb94851841a25c04099a1e6ac3a8a4" name="a99eb94851841a25c04099a1e6ac3a8a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99eb94851841a25c04099a1e6ac3a8a4">&#9670;&#160;</a></span>productImage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">height productImage</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a61568253d51ce3fdc25d3eb67ecffae9" name="a61568253d51ce3fdc25d3eb67ecffae9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61568253d51ce3fdc25d3eb67ecffae9">&#9670;&#160;</a></span>productPrice</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">height productPrice</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b00bf9bfc2752872d5be943eb8bb117" name="a0b00bf9bfc2752872d5be943eb8bb117"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b00bf9bfc2752872d5be943eb8bb117">&#9670;&#160;</a></span>productRate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">height productRate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0cce727c3fd80d4d12baaf6e0ab7b837" name="a0cce727c3fd80d4d12baaf6e0ab7b837"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cce727c3fd80d4d12baaf6e0ab7b837">&#9670;&#160;</a></span>productTitle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">height productTitle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_360431943b24ff09646ad68398308819.html">BasketStore_Aurora-main</a></li><li class="navelem"><a href="dir_7f44a4dd240ba85e5970fba9b87b995f.html">qml</a></li><li class="navelem"><a href="dir_d410f9b8e291e97135c0e3a6bfdf4cc3.html">pages</a></li><li class="navelem"><a href="_card_page_8qml.html">CardPage.qml</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

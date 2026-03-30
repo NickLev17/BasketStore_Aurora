@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Корзинка: Файл BasketStore_Aurora-main/qml/pages/СategoriesPage.qml</title>
+<link rel="icon" href="logo.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Корзинка<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Каталог товаров с офлайн-поддержкой</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_xD0_xA1ategories_page_8qml.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл СategoriesPage.qml</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>import QtQuick;</code><br />
+<code>import import;</code><br />
+<code>import Sailfish.Silica;</code><br />
+<code>import Database;</code><br />
+<code>import as;</code><br />
+<code>import Components;</code><br />
+<code>import Page;</code><br />
+<code>import objectName;</code><br />
+<code>import allowedOrientations;</code><br />
+<code>import backgroundColor;</code><br />
+<code>import id;</code><br />
+<code>import Column;</code><br />
+<code>import anchors;</code><br />
+<code>import fill;</code><br />
+<code>import leftMargin;</code><br />
+<code>import rightMargin;</code><br />
+<code>import spacing;</code><br />
+<code>import PageHeader;</code><br />
+<code>import title;</code><br />
+<code>import titleColor;</code><br />
+<code>import Button;</code><br />
+<code>import implicitHeight;</code><br />
+<code>import width;</code><br />
+<code>import visible;</code><br />
+<code>import opacity;</code><br />
+<code>import text;</code><br />
+<code>import icon.source;</code><br />
+<code>import icon.height;</code><br />
+<code>import btn_electronics.height;</code><br />
+<code>import icon.width;</code><br />
+<code>import onClicked;</code><br />
+<code>import console.log;</code><br />
+<code>import app.listElectronics.length;</code><br />
+<code>import var;</code><br />
+<code>import electronics;</code><br />
+<code>import app.listElectronics;</code><br />
+<code>import for;</code><br />
+<code>import i;</code><br />
+<code>import in;</code><br />
+<code>import tmp;</code><br />
+<code>import i2;</code><br />
+<code>import tmp2;</code><br />
+<code>import pageStack.push;</code><br />
+<code>import Qt.resolvedUrl;</code><br />
+<code>import PropertyAnimation;</code><br />
+<code>import target;</code><br />
+<code>import property;</code><br />
+<code>import to;</code><br />
+<code>import duration;</code><br />
+<code>import Component.onCompleted;</code><br />
+<code>import animOpacityElectronics.running;</code><br />
+<code>import true;</code><br />
+<code>import btn_mens_clothing.height;</code><br />
+<code>import app.listMensClothing.length;</code><br />
+<code>import mensClothing;</code><br />
+<code>import app.listMensClothing;</code><br />
+<code>import animOpacityMens.running;</code><br />
+<code>import btn_womens_clothing.height;</code><br />
+<code>import app.listWomensClothing.length;</code><br />
+<code>import womensClothing;</code><br />
+<code>import app.listWomensClothing;</code><br />
+<code>import animOpacityWomens.running;</code><br />
+<code>import btn_jewelry.height;</code><br />
+<code>import app.listJewelery.length;</code><br />
+<code>import Jewelery;</code><br />
+<code>import app.listJewelery;</code><br />
+<code>import animOpacityJewelry.running;</code><br />
+<code>import Rectangle;</code><br />
+<code>import height;</code><br />
+<code>import color;</code><br />
+<code>import anchors.topMargin;</code><br />
+<code>import btn_basket.height;</code><br />
+<code>import basket;</code><br />
+<code>import app.listMyBasket;</code><br />
+<code>import animOpacityBasket.running;</code><br />
+<code>import btn_historyBay.height;</code><br />
+<code>import HistoryBay;</code><br />
+<code>import app.listHistoryBay;</code><br />
+<code>import animOpacityHistory.running;</code><br />
+<code>import myDatabase.connect;</code><br />
+<code>import myDatabase.createTable;</code><br />
+<code>import listMyBasket;</code><br />
+<code>import listHistoryBay;</code><br />
+<code>import myDatabase.getTableData;</code><br />
+<code>import myDatabase.disconnect;</code><br />
+<code>import &quot;../components&quot;;</code><br />
+<code>import &quot;сategoriesPage&quot;;</code><br />
+<code>import &quot;#5577ee&quot;;</code><br />
+<code>import &quot;pageHeader&quot;;</code><br />
+<code>import &quot;Сategories&quot;;</code><br />
+<code>import &quot;white&quot;;</code><br />
+<code>import &quot;#6699FF&quot;;</code><br />
+<code>import &quot;Electronics&quot;;</code><br />
+<code>import &quot;../icons/device.png&quot;;</code><br />
+<code>import &quot;electronics size &quot;;</code><br />
+<code>import &quot;<a class="el" href="_product_page_8qml_source.html">ProductPage.qml</a>&quot;;</code><br />
+<code>import &quot;listProduct&quot;;</code><br />
+<code>import &quot;Men's clothing&quot;;</code><br />
+<code>import &quot;../icons/hanger.png&quot;;</code><br />
+<code>import &quot;mens size &quot;;</code><br />
+<code>import &quot;Women's clothing&quot;;</code><br />
+<code>import &quot;../icons/herz.png&quot;;</code><br />
+<code>import &quot;womens size &quot;;</code><br />
+<code>import &quot;Jewelry&quot;;</code><br />
+<code>import &quot;../icons/decoration.png&quot;;</code><br />
+<code>import &quot;jewelry size &quot;;</code><br />
+<code>import &quot;My Basket&quot;;</code><br />
+<code>import &quot;../icons/white_basket.png&quot;;</code><br />
+<code>import &quot;click&quot;;</code><br />
+<code>import &quot;<a class="el" href="_basket_page_8qml_source.html">BasketPage.qml</a>&quot;;</code><br />
+<code>import &quot;Order history&quot;;</code><br />
+<code>import &quot;../icons/bought.png&quot;;</code><br />
+<code>import &quot;<a class="el" href="_history_page_8qml_source.html">HistoryPage.qml</a>&quot;;</code><br />
+<code>import &quot;History&quot;;</code><br />
+<code>import &quot;Basket&quot;;</code><br />
+<code>import &quot;sad&quot;;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="_xD0_xA1ategories_page_8qml__dep__incl.png" border="0" usemap="#a_basket_store___aurora-main_2qml_2pages_2_xD0_xA1ategories_page_8qmldep" loading="lazy" alt=""/></div>
+<map name="a_basket_store___aurora-main_2qml_2pages_2_xD0_xA1ategories_page_8qmldep" id="a_basket_store___aurora-main_2qml_2pages_2_xD0_xA1ategories_page_8qmldep">
+<area shape="rect" title=" " alt="" coords="5,5,190,64"/>
+<area shape="rect" href="_main_page_8qml.html" title=" " alt="" coords="10,112,185,187"/>
+<area shape="poly" title=" " alt="" coords="98,77,100,112,95,111,97,82"/>
+<area shape="rect" href="_basket_store_8qml.html" title=" " alt="" coords="10,235,185,309"/>
+<area shape="poly" title=" " alt="" coords="99,200,100,235,95,233,96,205"/>
+</map>
+</div>
+</div>
+<p><a href="_xD0_xA1ategories_page_8qml_source.html">См. исходные тексты.</a></p>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_360431943b24ff09646ad68398308819.html">BasketStore_Aurora-main</a></li><li class="navelem"><a href="dir_7f44a4dd240ba85e5970fba9b87b995f.html">qml</a></li><li class="navelem"><a href="dir_d410f9b8e291e97135c0e3a6bfdf4cc3.html">pages</a></li><li class="navelem"><a href="_xD0_xA1ategories_page_8qml.html">СategoriesPage.qml</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>
