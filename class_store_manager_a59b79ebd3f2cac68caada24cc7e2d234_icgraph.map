@@ -1,0 +1,7 @@
+<map id="StoreManager::showData" name="StoreManager::showData">
+<area shape="rect" id="Node000001" title="Показ данных пользователю в режиме отладки. Отвечает за вывод информации пользователю в режиме отлдки..." alt="" coords="473,5,642,32"/>
+<area shape="rect" id="Node000002" href="$class_store_manager.html#aba1960fff2186926be4595fbfc8a87a1" title="Получение данных с интернет ресурса и их обработка. Отвечает за загрузку данных с интернет ресурса в ..." alt="" coords="232,5,425,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="455,19,425,21,425,16,460,19"/>
+<area shape="rect" id="Node000003" href="$class_store_manager.html#ad110aeb560605c38d80335d9a28fa855" title="Начальная инициализация и вызов метода для загрузки данных. Отвечает за вызов метода для загрузки дан..." alt="" coords="5,5,184,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="213,19,184,21,184,16,219,19"/>
+</map>

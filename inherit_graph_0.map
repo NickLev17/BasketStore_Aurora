@@ -1,0 +1,7 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,31,75,57"/>
+<area shape="rect" id="Node000001" href="$class_database.html" title="class Database Предоставлет возможность взаимодействи с базой данных SQLite." alt="" coords="135,5,212,32"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="89,32,137,25,132,27,91,37"/>
+<area shape="rect" id="Node000002" href="$class_store_manager.html" title="class StoreManager Предоставлет возможность сетевого взаимодействия с интерент ресурсом...." alt="" coords="123,56,225,83"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="90,51,125,59,119,60,90,56"/>
+</map>

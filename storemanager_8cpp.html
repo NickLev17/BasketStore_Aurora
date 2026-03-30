@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Корзинка: Файл BasketStore_Aurora-main/storemanager.cpp</title>
+<link rel="icon" href="logo.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Корзинка<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Каталог товаров с офлайн-поддержкой</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('storemanager_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл storemanager.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="storemanager_8h_source.html">storemanager.h</a>&quot;</code><br />
+<code>#include &lt;QNetworkAccessManager&gt;</code><br />
+<code>#include &lt;QNetworkReply&gt;</code><br />
+<code>#include &lt;QNetworkRequest&gt;</code><br />
+<code>#include &lt;QJsonDocument&gt;</code><br />
+<code>#include &lt;QJsonArray&gt;</code><br />
+<code>#include &lt;QJsonObject&gt;</code><br />
+<code>#include &lt;QFile&gt;</code><br />
+<code>#include &lt;QDebug&gt;</code><br />
+<code>#include &lt;QVariantMap&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для storemanager.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="storemanager_8cpp__incl.png" border="0" usemap="#a_basket_store___aurora-main_2storemanager_8cpp" loading="lazy" alt=""/></div>
+<map name="a_basket_store___aurora-main_2storemanager_8cpp" id="a_basket_store___aurora-main_2storemanager_8cpp">
+<area shape="rect" title=" " alt="" coords="625,5,786,48"/>
+<area shape="rect" href="storemanager_8h.html" title=" " alt="" coords="294,96,406,123"/>
+<area shape="poly" title=" " alt="" coords="622,47,421,95,420,90,627,46"/>
+<area shape="rect" title=" " alt="" coords="5,171,180,197"/>
+<area shape="poly" title=" " alt="" coords="622,33,547,42,454,54,355,72,259,99,186,130,126,164,123,159,184,125,257,93,354,67,453,49,546,37,627,32"/>
+<area shape="rect" title=" " alt="" coords="204,171,301,197"/>
+<area shape="poly" title=" " alt="" coords="622,32,533,40,432,52,342,71,308,84,284,98,273,110,265,125,256,157,253,153,260,123,268,107,280,94,306,79,341,66,431,47,533,35,628,31"/>
+<area shape="rect" title=" " alt="" coords="430,96,544,123"/>
+<area shape="poly" title=" " alt="" coords="652,48,536,93,535,88,647,49"/>
+<area shape="rect" title=" " alt="" coords="568,96,697,123"/>
+<area shape="poly" title=" " alt="" coords="689,47,656,86,653,82,685,50"/>
+<area shape="rect" title=" " alt="" coords="721,96,840,123"/>
+<area shape="poly" title=" " alt="" coords="726,46,761,85,756,84,724,51"/>
+<area shape="rect" title=" " alt="" coords="865,96,955,123"/>
+<area shape="poly" title=" " alt="" coords="759,46,866,90,861,90,758,51"/>
+<area shape="rect" title=" " alt="" coords="978,96,1076,123"/>
+<area shape="poly" title=" " alt="" coords="787,46,966,92,961,92,787,51"/>
+<area shape="rect" title=" " alt="" coords="1100,96,1152,123"/>
+<area shape="poly" title=" " alt="" coords="787,37,923,59,1087,95,1082,95,922,64,787,42"/>
+<area shape="rect" title=" " alt="" coords="1176,96,1246,123"/>
+<area shape="poly" title=" " alt="" coords="787,35,956,58,1164,96,1159,96,955,63,787,40"/>
+<area shape="rect" title=" " alt="" coords="476,171,546,197"/>
+<area shape="poly" title=" " alt="" coords="379,121,472,164,466,164,377,126"/>
+<area shape="poly" title=" " alt="" coords="307,125,153,169,151,163,303,121"/>
+<area shape="poly" title=" " alt="" coords="335,122,282,164,280,159,330,124"/>
+<area shape="rect" title=" " alt="" coords="570,171,636,197"/>
+<area shape="poly" title=" " alt="" coords="394,121,559,169,553,170,394,126"/>
+<area shape="rect" title=" " alt="" coords="324,171,381,197"/>
+<area shape="poly" title=" " alt="" coords="352,121,354,157,349,153,348,125"/>
+<area shape="rect" title=" " alt="" coords="404,171,453,197"/>
+<area shape="poly" title=" " alt="" coords="365,121,406,161,401,159,363,126"/>
+</map>
+</div>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_360431943b24ff09646ad68398308819.html">BasketStore_Aurora-main</a></li><li class="navelem"><a href="storemanager_8cpp.html">storemanager.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

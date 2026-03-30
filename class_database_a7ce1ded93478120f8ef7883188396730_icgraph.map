@@ -1,0 +1,5 @@
+<map id="Database::connectedChanged" name="Database::connectedChanged">
+<area shape="rect" id="Node000001" title="Сигнал изменения состояния подключения Отвечает за выпуск сигнала о смене состояния покдлючения." alt="" coords="185,5,382,32"/>
+<area shape="rect" id="Node000002" href="$class_database.html#ad781c19d9df89124b0d1a35d33391b75" title="Метод для соедиенения с базой данных. Отвечает за создание покдлючения к базе данных." alt="" coords="5,5,137,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,19,137,21,137,16,172,18"/>
+</map>
