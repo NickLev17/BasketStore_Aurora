@@ -1,0 +1,7 @@
+<map id="BasketStore_Aurora&#45;main/qml/pages/UserAuthorization.qml" name="BasketStore_Aurora&#45;main/qml/pages/UserAuthorization.qml">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,256,48"/>
+<area shape="rect" id="Node000002" href="$_main_page_8qml.html" title=" " alt="" coords="43,96,218,171"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,61,133,96,128,95,130,66"/>
+<area shape="rect" id="Node000003" href="$_basket_store_8qml.html" title=" " alt="" coords="43,219,218,293"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="132,184,133,219,128,217,129,189"/>
+</map>
