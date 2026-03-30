@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Корзинка: Исходный файл BasketStore_Aurora-main/database.h</title>
+<link rel="icon" href="logo.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Корзинка<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Каталог товаров с офлайн-поддержкой</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('database_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">database.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="database_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef DATABASE_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define DATABASE_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QObject&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;QSqlDatabase&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;QSqlQuery&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;QSqlError&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;QVariantMap&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;QVariantList&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span></div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_database.html">   16</a></span><span class="keyword">class </span><a class="code hl_function" href="class_database.html#a25acd0ba8ce00ebc6b331568d81e4230">Database</a> : <span class="keyword">public</span> QObject {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    Q_OBJECT</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_database.html#acf39c2366d114a256298466295bc8074">   23</a></span>    Q_PROPERTY(<span class="keywordtype">bool</span> <a class="code hl_property" href="class_database.html#acf39c2366d114a256298466295bc8074">connected</a> READ <a class="code hl_property" href="class_database.html#acf39c2366d114a256298466295bc8074">connected</a> NOTIFY <a class="code hl_signal" href="class_database.html#a7ce1ded93478120f8ef7883188396730">connectedChanged</a>)</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">explicit</span> <a class="code hl_function" href="class_database.html#a25acd0ba8ce00ebc6b331568d81e4230">Database</a>(QObject *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    Q_INVOKABLE <span class="keywordtype">bool</span> <a class="code hl_function" href="class_database.html#ad781c19d9df89124b0d1a35d33391b75">connect</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    Q_INVOKABLE <span class="keywordtype">bool</span> <a class="code hl_function" href="class_database.html#a07875b3727c4cbfb4259255108729c8f">disconnect</a>();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    Q_INVOKABLE <span class="keywordtype">bool</span> <a class="code hl_function" href="class_database.html#ab648a61435981857ae8a66783f427223">createTable</a>(<span class="keyword">const</span> QString &amp;tableName);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    Q_INVOKABLE <span class="keywordtype">bool</span> <a class="code hl_function" href="class_database.html#a39101452395457478328c314b74bf466">stateConnect</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    Q_INVOKABLE <span class="keywordtype">bool</span> <a class="code hl_function" href="class_database.html#a0963329ae19e3c13df386fb17c6061d3">addRecord</a>(<span class="keyword">const</span> QString&amp; tableName,<span class="keyword">const</span> QString &amp;title,<span class="keyword">const</span> <span class="keywordtype">double</span> &amp;price, <span class="keyword">const</span> QString &amp;image, <span class="keyword">const</span> QString &amp;category, <span class="keyword">const</span> QString &amp;description,<span class="keyword">const</span> <span class="keywordtype">double</span> &amp;rate,<span class="keyword">const</span> <span class="keywordtype">double</span> &amp;voices);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    Q_INVOKABLE <span class="keywordtype">void</span> <a class="code hl_function" href="class_database.html#ab60fb47ed40fd5ba3ee99ed895b4db6d">readTableData</a>(<span class="keyword">const</span> QString &amp;tableName);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    Q_INVOKABLE QVariantMap <a class="code hl_function" href="class_database.html#a99712d256f00897448c65b76957e1d67">getTableData</a>(<span class="keyword">const</span> QString &amp;tableName);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    Q_INVOKABLE <span class="keywordtype">bool</span> <a class="code hl_function" href="class_database.html#a79ab18a713f39f6f32d191d326f9dd1b">removeRowTable</a>(<span class="keyword">const</span> QString&amp; tableName,<span class="keyword">const</span> QString&amp; value);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    Q_INVOKABLE <span class="keywordtype">bool</span> <a class="code hl_function" href="class_database.html#a928db29869395289f434c4c227b67fbc">removeTableDatabase</a>(<span class="keyword">const</span> QString&amp; tableName);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    Q_INVOKABLE QVariantMap <a class="code hl_function" href="class_database.html#a295d8d9505050333c9ba1b385c7f9648">sortDataTable</a>(<span class="keyword">const</span> QString&amp; tableName,<span class="keyword">const</span> QString&amp; pattern);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="class_database.html#adfcbe7d1bf4733f33b4a187b10e62fa4">  136</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_database.html#adfcbe7d1bf4733f33b4a187b10e62fa4">connected</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_database.html#aa3bf8de3e3d045bac7e37ff0c0815f24">m_connected</a>; }</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>signals:</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="class_database.html#a7ce1ded93478120f8ef7883188396730">  144</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_database.html#a7ce1ded93478120f8ef7883188396730">connectedChanged</a>();</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="class_database.html#a7357cbeca05937556f66e2fe2288bdb5">  151</a></span>    QSqlDatabase <a class="code hl_variable" href="class_database.html#a7357cbeca05937556f66e2fe2288bdb5">m_db</a>;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="class_database.html#aa3bf8de3e3d045bac7e37ff0c0815f24">  156</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_database.html#aa3bf8de3e3d045bac7e37ff0c0815f24">m_connected</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>};</div>
+</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_database_html_a07875b3727c4cbfb4259255108729c8f"><div class="ttname"><a href="class_database.html#a07875b3727c4cbfb4259255108729c8f">Database::disconnect</a></div><div class="ttdeci">Q_INVOKABLE bool disconnect()</div><div class="ttdoc">Метод для разрыва соедиенения с базой данных. Отвечает за разрыв покдлючения с базой данных.</div><div class="ttdef"><b>Определения</b> database.cpp:151</div></div>
+<div class="ttc" id="aclass_database_html_a0963329ae19e3c13df386fb17c6061d3"><div class="ttname"><a href="class_database.html#a0963329ae19e3c13df386fb17c6061d3">Database::addRecord</a></div><div class="ttdeci">Q_INVOKABLE bool addRecord(const QString &amp;tableName, const QString &amp;title, const double &amp;price, const QString &amp;image, const QString &amp;category, const QString &amp;description, const double &amp;rate, const double &amp;voices)</div><div class="ttdoc">Добавление данных в таблицу Отвечает за добавление данных в таблицу базы данных.</div><div class="ttdef"><b>Определения</b> database.cpp:52</div></div>
+<div class="ttc" id="aclass_database_html_a25acd0ba8ce00ebc6b331568d81e4230"><div class="ttname"><a href="class_database.html#a25acd0ba8ce00ebc6b331568d81e4230">Database::Database</a></div><div class="ttdeci">Database(QObject *parent=nullptr)</div><div class="ttdoc">Базовый конструктор класса. Конструктор по умолчанию.</div><div class="ttdef"><b>Определения</b> database.cpp:8</div></div>
+<div class="ttc" id="aclass_database_html_a295d8d9505050333c9ba1b385c7f9648"><div class="ttname"><a href="class_database.html#a295d8d9505050333c9ba1b385c7f9648">Database::sortDataTable</a></div><div class="ttdeci">Q_INVOKABLE QVariantMap sortDataTable(const QString &amp;tableName, const QString &amp;pattern)</div><div class="ttdoc">Получение отсортированных данных из таблицы Отвечает за вовзрат отсортированных данных из таблицы баз...</div><div class="ttdef"><b>Определения</b> database.cpp:171</div></div>
+<div class="ttc" id="aclass_database_html_a39101452395457478328c314b74bf466"><div class="ttname"><a href="class_database.html#a39101452395457478328c314b74bf466">Database::stateConnect</a></div><div class="ttdeci">Q_INVOKABLE bool stateConnect() const</div><div class="ttdoc">Метод получения текущего значения соединения с базой данных. Отвечает за вовзарт значения состояния с...</div><div class="ttdef"><b>Определения</b> database.cpp:146</div></div>
+<div class="ttc" id="aclass_database_html_a7357cbeca05937556f66e2fe2288bdb5"><div class="ttname"><a href="class_database.html#a7357cbeca05937556f66e2fe2288bdb5">Database::m_db</a></div><div class="ttdeci">QSqlDatabase m_db</div><div class="ttdef"><b>Определения</b> database.h:151</div></div>
+<div class="ttc" id="aclass_database_html_a79ab18a713f39f6f32d191d326f9dd1b"><div class="ttname"><a href="class_database.html#a79ab18a713f39f6f32d191d326f9dd1b">Database::removeRowTable</a></div><div class="ttdeci">Q_INVOKABLE bool removeRowTable(const QString &amp;tableName, const QString &amp;value)</div><div class="ttdoc">Удаление записи из таблицы. Отвечает за удаление данных из таблицы базы данных.</div><div class="ttdef"><b>Определения</b> database.cpp:128</div></div>
+<div class="ttc" id="aclass_database_html_a7ce1ded93478120f8ef7883188396730"><div class="ttname"><a href="class_database.html#a7ce1ded93478120f8ef7883188396730">Database::connectedChanged</a></div><div class="ttdeci">void connectedChanged()</div><div class="ttdoc">Сигнал изменения состояния подключения Отвечает за выпуск сигнала о смене состояния покдлючения.</div></div>
+<div class="ttc" id="aclass_database_html_a928db29869395289f434c4c227b67fbc"><div class="ttname"><a href="class_database.html#a928db29869395289f434c4c227b67fbc">Database::removeTableDatabase</a></div><div class="ttdeci">Q_INVOKABLE bool removeTableDatabase(const QString &amp;tableName)</div><div class="ttdoc">Удаление всех записей из таблицы. Отвечает за удаление всех данных из таблицы базы данных.</div><div class="ttdef"><b>Определения</b> database.cpp:164</div></div>
+<div class="ttc" id="aclass_database_html_a99712d256f00897448c65b76957e1d67"><div class="ttname"><a href="class_database.html#a99712d256f00897448c65b76957e1d67">Database::getTableData</a></div><div class="ttdeci">Q_INVOKABLE QVariantMap getTableData(const QString &amp;tableName)</div><div class="ttdoc">Получение данных из таблицы Отвечает за вовзрат данных из таблицы базы данных.</div><div class="ttdef"><b>Определения</b> database.cpp:94</div></div>
+<div class="ttc" id="aclass_database_html_aa3bf8de3e3d045bac7e37ff0c0815f24"><div class="ttname"><a href="class_database.html#aa3bf8de3e3d045bac7e37ff0c0815f24">Database::m_connected</a></div><div class="ttdeci">bool m_connected</div><div class="ttdef"><b>Определения</b> database.h:156</div></div>
+<div class="ttc" id="aclass_database_html_ab60fb47ed40fd5ba3ee99ed895b4db6d"><div class="ttname"><a href="class_database.html#ab60fb47ed40fd5ba3ee99ed895b4db6d">Database::readTableData</a></div><div class="ttdeci">Q_INVOKABLE void readTableData(const QString &amp;tableName)</div><div class="ttdoc">Чтение данных из таблицы базы данных. Отвечает за чтение данных из таблицы.</div><div class="ttdef"><b>Определения</b> database.cpp:68</div></div>
+<div class="ttc" id="aclass_database_html_ab648a61435981857ae8a66783f427223"><div class="ttname"><a href="class_database.html#ab648a61435981857ae8a66783f427223">Database::createTable</a></div><div class="ttdeci">Q_INVOKABLE bool createTable(const QString &amp;tableName)</div><div class="ttdoc">Создание и открытие таблицы базы данных. Отвечает за создание таблицы в базе данных,...</div><div class="ttdef"><b>Определения</b> database.cpp:31</div></div>
+<div class="ttc" id="aclass_database_html_acf39c2366d114a256298466295bc8074"><div class="ttname"><a href="class_database.html#acf39c2366d114a256298466295bc8074">Database::connected</a></div><div class="ttdeci">bool connected</div><div class="ttdef"><b>Определения</b> database.h:23</div></div>
+<div class="ttc" id="aclass_database_html_ad781c19d9df89124b0d1a35d33391b75"><div class="ttname"><a href="class_database.html#ad781c19d9df89124b0d1a35d33391b75">Database::connect</a></div><div class="ttdeci">Q_INVOKABLE bool connect()</div><div class="ttdoc">Метод для соедиенения с базой данных. Отвечает за создание покдлючения к базе данных.</div><div class="ttdef"><b>Определения</b> database.cpp:10</div></div>
+<div class="ttc" id="aclass_database_html_adfcbe7d1bf4733f33b4a187b10e62fa4"><div class="ttname"><a href="class_database.html#adfcbe7d1bf4733f33b4a187b10e62fa4">Database::connected</a></div><div class="ttdeci">bool connected() const</div><div class="ttdoc">Получение данных о текущем состоянии соединения. Отвечает за получение данных о состоянии соединения.</div><div class="ttdef"><b>Определения</b> database.h:136</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_360431943b24ff09646ad68398308819.html">BasketStore_Aurora-main</a></li><li class="navelem"><a href="database_8h.html">database.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>
